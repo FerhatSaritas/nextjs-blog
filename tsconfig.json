@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ESNext"
-    ],
+    "paths": {
+      "@posts/*": ["./app/_public/_posts/*"]
+    },
+    "lib": ["ESNext"],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
@@ -30,13 +31,7 @@
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
+

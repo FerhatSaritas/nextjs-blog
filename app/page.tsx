@@ -1,4 +1,6 @@
+import { Footer, Header } from "./_components";
+
 export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+  return <></>;
 }
 
