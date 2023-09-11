@@ -2,6 +2,12 @@
   "name": "nextjs-blog",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -9,6 +15,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@types/react": "^18.2.21",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
