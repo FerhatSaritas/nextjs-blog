@@ -19,7 +19,6 @@ export const GET = async (request: NextRequest) => {
       frontmatter,
     };
   });
-
   return NextResponse.json({ posts });
 };
 
