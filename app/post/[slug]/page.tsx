@@ -1,5 +1,3 @@
-import fs from "fs";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { Post } from "../../_constants/posts.type";
 
