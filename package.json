@@ -9,23 +9,37 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "autoprefixer": "^10.4.15",
+    "bun-types": "latest",
+    "daisyui": "^3.7.4",
+    "eslint": "^8.49.0",
+    "lint-staged": "^14.0.1",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@types/node": "^20.6.0",
-    "@types/react": "^18.2.21",
-    "daisyui": "^3.7.4",
     "gray-matter": "^4.0.3",
     "next": "latest",
-    "postcss": "^8.4.29",
     "react": "latest",
     "react-dom": "latest",
     "react-markdown": "^8.0.7",
-    "supports-color": "8.1.1",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
+    "supports-color": "8.1.1"
+  },
+  "postcss": {
+    "plugins": [
+      "tailwindcss",
+      "autoprefixer"
+    ]
   }
 }

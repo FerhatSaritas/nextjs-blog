@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar/Navbar.component";
 
 export interface HeaderProps {}
 
 export const Header = (props: HeaderProps) => {
-  return <h1>Header Component</h1>;
+  return <Navbar />;
 };
 
 export default Header;
