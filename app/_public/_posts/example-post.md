@@ -1,9 +1,8 @@
 ---
 title: "This is an example post"
-author: "Alex Merced"
+author: "Ferhat Saritas"
 category: "example"
 date: "2022-03-13"
-bannerImage: "url-to-image.png"
 tags:
     - example
 ---

@@ -11,7 +11,7 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Header />
-        {children}
+        <div className='container py-8'>{children}</div>
         <Footer />
       </body>
     </html>

@@ -1,8 +1,12 @@
-export interface FooterProps {}
+export interface FooterProps {
+  className?: string;
+}
 
 export const Footer = (props: FooterProps) => {
   return (
-    <footer className='footer items-center p-4 bg-neutral text-neutral-content'>
+    <footer
+      className={`footer items-center p-4 bg-neutral text-neutral-content ${props.className}`}
+    >
       <aside className='items-center grid-flow-col'>
         <svg
           width='36'
