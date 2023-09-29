@@ -1,5 +1,5 @@
+import { Navbar } from "@app/_components/molecules";
 import React from "react";
-import Navbar from "../../molecules/Navbar/Navbar.component";
 
 export interface HeaderProps {}
 
