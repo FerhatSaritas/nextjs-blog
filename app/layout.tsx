@@ -11,8 +11,8 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Header />
-        <div className='container py-8'>{children}</div>
-        <Footer />
+        <div className='container py-8 bg-neutral'>{children}</div>
+        <Footer className='fixed bottom-0' />
       </body>
     </html>
   );
