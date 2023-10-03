@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
 import { Post } from "../../_constants/posts.type";
 import Loading from "@app/loading";
 import { Badge } from "@app/_components/atoms";
@@ -13,14 +13,14 @@ export default async function Post({ params }: { params: { slug: string } }) {
   );
   const { post } = await response.json();
   const { frontmatter, content } = post;
-  const { title, author, category, date, bannerImage, tags } = frontmatter;
+  const { title, category, date, bannerImage, tags } = frontmatter;
 
   return post ? (
-    <article className='prose'>
+    <article className='prose w-max'>
       {bannerImage && <img src={bannerImage as string} />}
       <h1>{title}</h1>
-      <h3 className='text-gray-500'>
-        {author}, {new Date(date).toLocaleDateString("de-DE")}
+      <h3 className='text-neutral-600'>
+        Published on {new Date(date).toLocaleDateString("de-DE")}
       </h3>
       <h3>{category}</h3>
       <span className='flex'>
@@ -28,7 +28,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <Badge color='primary'>{tag}</Badge>
         ))}
       </span>
-      {content && <ReactMarkdown>{content}</ReactMarkdown>}
+      {content && <Markdown>{content}</Markdown>}
     </article>
   ) : (
     <Loading />

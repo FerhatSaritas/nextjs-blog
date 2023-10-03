@@ -5,7 +5,7 @@ export interface FooterProps {
 export const Footer = (props: FooterProps) => {
   return (
     <footer
-      className={`footer items-center p-4 bg-neutral text-neutral-content ${props.className}`}
+      className={`footer items-center p-4 bg-neutral text-neutral-content relative bottom-0 mx-auto  ${props.className}`}
     >
       <aside className='items-center grid-flow-col'>
         <svg
