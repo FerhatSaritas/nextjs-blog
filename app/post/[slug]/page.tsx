@@ -16,7 +16,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const { title, category, date, bannerImage, tags } = frontmatter;
 
   return post ? (
-    <article className='prose w-max'>
+    <article className='prose min-w-full'>
       {bannerImage && <img src={bannerImage as string} />}
       <h1>{title}</h1>
       <h3 className='text-neutral-600'>
