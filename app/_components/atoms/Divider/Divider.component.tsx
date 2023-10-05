@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { PropsWithChildren } from "react";
 
 export interface DividerProps {
-  horizontal: boolean;
+  horizontal?: boolean;
 }
 
 export const Divider = ({

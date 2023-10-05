@@ -1,7 +1,7 @@
 import Markdown from "react-markdown";
 import { Post } from "../../_constants/posts.type";
 import Loading from "@app/loading";
-import { Badge } from "@app/_components/atoms";
+import { Badge, Divider } from "@app/_components/atoms";
 
 // The page for each post
 export default async function Post({ params }: { params: { slug: string } }) {
@@ -16,20 +16,23 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const { title, category, date, bannerImage, tags } = frontmatter;
 
   return post ? (
-    <article className='prose max-w-none lg:w-6/12 mx-auto'>
+    <article className='prose lg:prose-lg max-w-none prose-h4:text-neutral-600 prose-h4:m-0 prose-img:rounded-lg prose-h1:underline prose-a:text-secondary lg:w-6/12 mx-auto'>
       {bannerImage && <img src={bannerImage as string} />}
       <h1>{title}</h1>
-      <h3 className='text-neutral-600'>
-        Published on {new Date(date).toLocaleDateString("de-DE")}
-      </h3>
-      <h3>{category}</h3>
-      <span className='flex'>
+      <div className='flex flex-row justify-between mb-4'>
+        <h4 className=''>
+          Published on {new Date(date).toLocaleDateString("de-DE")}
+        </h4>
+        <h5>{category}</h5>
+      </div>
+      <span className='flex flex-row'>
         {tags.map((tag: string) => (
           <Badge key={tag} color='primary'>
             {tag}
           </Badge>
         ))}
       </span>
+      <Divider />
       {content && <Markdown>{content}</Markdown>}
     </article>
   ) : (
