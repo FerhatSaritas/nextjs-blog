@@ -11,7 +11,9 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Header />
-        <div className='container py-8'>{children}</div>
+        <div className='container py-8 bg-primary-content rounded-lg'>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
