@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <div className='navbar bg-neutral text-neutral-content w-full lg:w-11/12 mx-auto rounded-lg my-4'>
+    <div className='navbar bg-neutral text-neutral-content w-full lg:w-11/12 mx-auto lg:rounded-b-lg'>
       <div className='flex-1'>
         <a className='btn btn-ghost normal-case text-xl'> Insight </a>
       </div>
