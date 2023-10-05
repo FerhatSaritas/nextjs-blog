@@ -25,7 +25,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <h3>{category}</h3>
       <span className='flex'>
         {tags.map((tag: string) => (
-          <Badge color='primary'>{tag}</Badge>
+          <Badge key={tag} color='primary'>
+            {tag}
+          </Badge>
         ))}
       </span>
       {content && <ReactMarkdown>{content}</ReactMarkdown>}
