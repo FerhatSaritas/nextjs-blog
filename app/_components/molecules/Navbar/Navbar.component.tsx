@@ -33,7 +33,7 @@ export const Navbar = () => {
               <a>Portfolio</a>
             </li>
             <li>
-              <a>About</a>
+              <a>About Me</a>
             </li>
           </ul>
         </div>
