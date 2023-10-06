@@ -1,11 +1,15 @@
 import { default as ProfilePicture } from "@app/_public/assets/profile.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
     <div className='navbar bg-neutral text-neutral-content w-full lg:w-11/12 mx-auto lg:rounded-b-lg'>
       <div className='flex-1'>
-        <a className='btn btn-ghost normal-case text-xl'> Insight </a>
+        <Link href='/' className='btn btn-ghost normal-case text-xl'>
+          {" "}
+          Insight{" "}
+        </Link>
       </div>
       <div className='dropdown dropdown-end'>
         <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
