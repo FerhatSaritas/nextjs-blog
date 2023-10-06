@@ -1,6 +1,5 @@
 import Markdown from "react-markdown";
 import { Post } from "../../_constants/posts.type";
-import Loading from "@app/loading";
 import { Badge, Divider } from "@app/_components/atoms";
 
 // The page for each post
@@ -15,7 +14,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const { frontmatter, content } = post;
   const { title, category, date, bannerImage, tags } = frontmatter;
 
-  return post ? (
+  return (
     <article className='prose prose-lg xl:prose-xl max-w-none prose-h4:text-neutral-600 prose-h4:m-0 prose-img:rounded-lg prose-h1:underline prose-a:text-primary xl:w-6/12 mx-auto'>
       {bannerImage && <img src={bannerImage as string} />}
       <h1>{title}</h1>
@@ -39,8 +38,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <Divider />
       {content && <Markdown>{content}</Markdown>}
     </article>
-  ) : (
-    <Loading />
   );
 }
 
