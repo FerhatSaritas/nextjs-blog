@@ -1,5 +1,4 @@
-import { default as ProfilePicture } from "@app/_public/assets/profile.jpg";
-import Image from "next/image";
+import { GitHubIcon, LinkedInIcon } from "@app/_public/Icons";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -45,40 +44,22 @@ export const Navbar = () => {
           Ferhat Saritas{" "}
         </Link>
       </div>
-      <div className='navbar-end'>
-        <div className='form-control'>
-          <input
-            type='text'
-            placeholder='Search'
-            className='input input-bordered bg-neutral text-neutral-content input-accent w-24 md:w-auto'
-          />
-        </div>
-      </div>
-
-      {/* <div className='dropdown dropdown-end'>
-        <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
-          <div className='w-10 rounded-full'>
-            <Image src={ProfilePicture} width={32} alt='Profile' />
-          </div>
-        </label>
-        <ul
-          tabIndex={0}
-          className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52'
+      <div className='navbar-end flex gap-4'>
+        <Link href='' className='btn btn-secondary btn-square' target='_blank'>
+          <span className='w-10'>
+            <LinkedInIcon />
+          </span>
+        </Link>
+        <Link
+          href='https://github.com/FerhatSaritas'
+          target='_blank'
+          className='btn btn-accent btn-square'
         >
-          <li>
-            <a className='justify-between'>
-              Profile
-              <span className='badge'>New</span>
-            </a>
-          </li>
-          <li>
-            <a>Settings</a>
-          </li>
-          <li>
-            <a>Logout</a>
-          </li>
-        </ul>
-      </div> */}
+          <span className='w-10'>
+            <GitHubIcon />
+          </span>
+        </Link>
+      </div>
     </div>
   );
 };
