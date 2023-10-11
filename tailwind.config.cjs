@@ -16,8 +16,7 @@ export default {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["fantasy", "haloween"],
-    darkTheme: "haloween",
+    themes: ["forest"],
     base: true,
     styled: true,
     logs: true,

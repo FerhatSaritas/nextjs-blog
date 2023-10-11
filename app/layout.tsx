@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='bg-neutral-content'>
+      <body>
         <Header />
         <div className='flex flex-row w-full'>
           <div className='container py-4 min-h-screen'>{children}</div>
