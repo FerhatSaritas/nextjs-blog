@@ -1,1 +1,3 @@
-export * from "./Link.component";
+export * from "./NavLink";
+export * from "./IconButtonLink";
+

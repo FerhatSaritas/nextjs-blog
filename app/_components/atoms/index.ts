@@ -6,4 +6,6 @@ export * from "./Input";
 export * from "./Links";
 export * from "./Loading";
 export * from "./Tooltip";
+export * from "./Menu";
+export * from "./Label";
 
