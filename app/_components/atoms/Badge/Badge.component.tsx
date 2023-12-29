@@ -18,7 +18,7 @@ export interface BadgeProps {
 
 export const Badge = ({
   children,
-  color = "neutral",
+  color = "primary",
   outline = false,
 }: PropsWithChildren<BadgeProps>) => {
   const classes = classNames(

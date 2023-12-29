@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <div className='navbar bg-neutral text-neutral-content w-full lg:w-11/12 mx-auto lg:rounded-b-lg'>
+    <div className='navbar w-full lg:w-11/12 mx-auto lg:rounded-b-lg'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <Label />

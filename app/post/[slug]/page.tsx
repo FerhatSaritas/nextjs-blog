@@ -30,7 +30,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       </div>
       <span className='flex flex-row'>
         {tags.map((tag: string) => (
-          <Badge key={tag} color='secondary'>
+          <Badge key={tag} color='primary'>
             {tag}
           </Badge>
         ))}
