@@ -54,6 +54,7 @@ build/Release
 
 node_modules/
 jspm_packages/
+bun.lockdb
 
 # Snowpack dependency directory (https://snowpack.dev/)
 
