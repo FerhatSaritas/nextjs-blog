@@ -2,11 +2,25 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
-  theme: { ...defaultTheme },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    "prettier-plugin-tailwindcss",
+  ],
   daisyui: {
-    themes: ["forest", "fantasy"],
-    darkTheme: "forest",
+    themes: ["forest"],
     base: true,
     styled: true,
     logs: true,
