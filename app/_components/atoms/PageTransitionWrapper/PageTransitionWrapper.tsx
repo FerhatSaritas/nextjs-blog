@@ -15,7 +15,7 @@ export const PageTransitionWrapper = ({
 
   return (
     <div
-      className={`transition-opacity duration-500 ${
+      className={`transition-opacity duration-700 ${
         isMounted ? "opacity-100" : "opacity-0"
       }`}
     >

@@ -8,4 +8,5 @@ export * from "./Loading";
 export * from "./Tooltip";
 export * from "./Menu";
 export * from "./Label";
-export * from "./Pagewrapper";
+export * from "./PageTransitionWrapper";
+
