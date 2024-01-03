@@ -28,6 +28,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@tailwindui/react": "^0.1.1",
     "@types/node": "^20.6.0",
     "classnames": "^2.3.2",
     "gray-matter": "^4.0.3",

@@ -1,3 +1,10 @@
+import { LoadingComponent } from "./_components/atoms";
+
 export default function Loading() {
-  return <h1>Loading</h1>;
+  return (
+    <div className='flex justify-center h-full'>
+      <LoadingComponent />
+    </div>
+  );
 }
+
