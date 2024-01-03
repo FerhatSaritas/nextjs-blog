@@ -13,6 +13,7 @@ export const GET = async (request: NextRequest) => {
       "utf-8"
     );
     const { data: frontmatter } = matter(readFile);
+    console.log("frontmatter", frontmatter);
 
     return {
       slug,
