@@ -1,16 +1,18 @@
+import Link from "next/link";
+
 export const Menu = () => (
   <ul
     tabIndex={0}
     className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral text-neutral-content rounded-box w-52'
   >
     <li>
-      <a>Homepage</a>
+      <Link href='/blog'>Blog</Link>
     </li>
     <li>
-      <a>Portfolio</a>
+      <Link href='#'>Portfolio</Link>
     </li>
     <li>
-      <a>About Me</a>
+      <Link href='#'>About Me</Link>
     </li>
   </ul>
 );

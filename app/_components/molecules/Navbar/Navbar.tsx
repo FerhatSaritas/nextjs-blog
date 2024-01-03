@@ -12,7 +12,7 @@ export const Navbar = () => {
         </div>
       </div>
       <div className='navbar-center flex-1'>
-        <Link href='/' className='btn btn-ghost normal-case text-xl'>
+        <Link href='/' className='btn btn-ghost font-mono normal-case text-xl'>
           {" "}
           Ferhat Saritas{" "}
         </Link>
