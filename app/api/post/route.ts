@@ -2,6 +2,9 @@ import fs from "node:fs";
 import { NextRequest, NextResponse } from "next/server";
 import matter from "gray-matter";
 
+export const dynamic = 'force-dynamic'
+
+
 export const GET = async (request: NextRequest) => {
   const slug = request.nextUrl.searchParams.get("slug");
   const file = fs.readFileSync(

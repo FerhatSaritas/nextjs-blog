@@ -2,6 +2,9 @@ import fs from "node:fs";
 import { NextRequest, NextResponse } from "next/server";
 import matter from "gray-matter";
 
+export const dynamic = 'force-dynamic'
+
+
 export const GET = async (request: NextRequest) => {
   const files = fs.readdirSync(process.env.POSTS_LOCATION ?? "");
 
@@ -13,6 +16,7 @@ export const GET = async (request: NextRequest) => {
       "utf-8"
     );
     const { data: frontmatter } = matter(readFile);
+    console.log("frontmatter", frontmatter);
 
     return {
       slug,
