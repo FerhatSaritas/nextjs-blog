@@ -1,7 +1,7 @@
-export type Post = {
+export type PostType = {
   slug: string;
   frontmatter: {
-    [key: string]: string | number | string[];
+    [key: string]: string | number | string[] | Date;
   };
   content?: string;
 };
