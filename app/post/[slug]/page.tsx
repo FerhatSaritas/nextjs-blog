@@ -1,12 +1,12 @@
 import Markdown from "react-markdown";
 import { Badge, Divider, PageTransitionWrapper } from "@app/_components/atoms";
-import { getPost } from "@app/_utils"
+import { getPosts } from "@app/_utils"
 import { PostType } from "../../_constants";
 
 // The page for each post
 export default async function Post({ params }: { params: { slug: string } }): Promise<JSX.Element>
 {
-  const { frontmatter, content } = await getPost<PostType>(params.slug)
+  const { frontmatter, content } = await getPosts<PostType>(params.slug)
   const { title, category, date, bannerImage, tags } = frontmatter;
 
   return (

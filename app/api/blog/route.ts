@@ -1,28 +1,25 @@
-import fs from "node:fs";
-import { NextRequest, NextResponse } from "next/server";
-import matter from "gray-matter";
+import fs from 'node:fs'
+import { NextRequest, NextResponse } from 'next/server'
+import matter from 'gray-matter'
 
 export const dynamic = 'force-dynamic'
 
-
 export const GET = async (request: NextRequest) => {
-  const files = fs.readdirSync(process.env.POSTS_LOCATION ?? "");
+    const files = fs.readdirSync(process.env.POSTS_LOCATION ?? '')
 
-  // get frontmatter & slug from each post
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(
-      `${process.env.POSTS_LOCATION}/${fileName}`,
-      "utf-8"
-    );
-    const { data: frontmatter } = matter(readFile);
-    console.log("frontmatter", frontmatter);
+    // get frontmatter & slug from each post
+    const posts = files.map((fileName) => {
+        const slug = fileName.replace('.md', '')
+        const readFile = fs.readFileSync(
+            `${process.env.POSTS_LOCATION}/${fileName}`,
+            'utf-8'
+        )
+        const { data: frontmatter } = matter(readFile)
 
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-  return NextResponse.json({ posts });
-};
-
+        return {
+            slug,
+            frontmatter,
+        }
+    })
+    return NextResponse.json({ posts })
+}

@@ -1,22 +1,25 @@
+import fs from 'fs'
+import { domain } from '../_constants'
 
-import fs from "fs";
+export const getPosts = async <T>(id: string): Promise<T> => {
+    const post = fs.readFile(`_public/_posts/example-post.md`, (err, data) => {
+        if (err) console.error(__dirname)
+    })
 
-export const getPost = async <T>(id: string): Promise<T> => {
-  const domain = process.env.DOMAIN;
+    return await fetch(`http://${domain}/api/post?slug=${id}`, {
+        method: 'GET',
+    })
+        .then((response) => {
+            if (!response.ok) throw new Error(response.statusText)
 
-  const post = fs.readFile(`_public/_posts/example-post.md`, (err, data) => {
-    if (err) console.error(__dirname);
-    else console.log("data", data);
-  });
+            return response.json() as Promise<{ post: T }>
+        })
+        .then((post) => post.post)
+}
 
-  return await fetch(
-    `http://${domain}/api/post?slug=${id}`,
-    {
-      method: "GET",
-    }
-  ).then((response) => {
-    if (!response.ok) throw new Error(response.statusText);
-
-    return response.json() as Promise<{post: T}>
-  }).then(post => post.post)
+export const fetchGet = async <T>(url: string) => {
+    return await fetch(url, { method: 'GET' }).then((response) => {
+        if (!response.ok) throw new Error(response.statusText)
+        return response.json() as Promise<Record<string, T>>
+    })
 }
